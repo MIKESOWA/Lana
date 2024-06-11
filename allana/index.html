@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="dentro">
+       <h1>Há quanto o casal Mike e Allana estão juntos?</h1>
+        <h1 id="ano"></h1>
+        <h1 id="mes"></h1>
+        <h1 id="dia"></h1>
+        <h1 id="horas"></h1>
+        <h1 id="minutos"></h1>
+        <h1 id="segundos"></h1>
+        
+
+
+
+    </div>
+    <script>
+        let segundoTotal = 12009600;
+        let minutosTotal = segundoTotal / 60 ;
+        let horasTotais = minutosTotal / 60 ;
+        let diasTotais = horasTotais / 24 ;
+        let mesesTotais = diasTotais / 30 ;
+        let anosTotais = mesesTotais / 12 ;
+        let segundosP = 0;
+        document.getElementById("minutos").innerHTML = "minutos " + Math.round(minutosTotal * 10) / 10;;
+        document.getElementById("horas").innerHTML = "horas " + Math.round(horasTotais * 10) / 10;;
+        document.getElementById("dia").innerHTML = "dias " + Math.round(diasTotais * 10) / 10;;
+        document.getElementById("mes").innerHTML = "meses " + Math.round(mesesTotais * 10) / 10;;
+        document.getElementById("ano").innerHTML = "anos " + Math.round(anosTotais * 10) / 10;;
+        function datas(){
+            segundoTotal = segundoTotal + 1;
+            document.getElementById("segundos").innerHTML = "segundos " + segundoTotal;
+            minutosTotal = segundoTotal / 60 ;
+            horasTotais = minutosTotal / 60 ;
+            diasTotais = horasTotais / 24 ;
+            mesesTotais = diasTotais / 30 ;
+            anosTotais = mesesTotais / 12 ;
+            document.getElementById("minutos").innerHTML = "minutos " + Math.round(minutosTotal * 10) / 10;;
+            document.getElementById("horas").innerHTML = "horas " + Math.round(horasTotais * 10) / 10;;
+            document.getElementById("dia").innerHTML = "dias " + Math.round(diasTotais * 10) / 10;;
+            document.getElementById("mes").innerHTML = "meses " + Math.round(mesesTotais * 10) / 10;;
+            document.getElementById("ano").innerHTML = "anos " + Math.round(anosTotais * 10) / 10;;
+                
+}
+        setInterval(datas , 800);
+    </script>
+</body>
+</html>

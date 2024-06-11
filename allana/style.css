@@ -1,0 +1,69 @@
+@charset "UTF-8";
+body{
+    background-color: #5C0C1D;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dentro{
+    margin-top: 5%;
+    margin-bottom: 10%;
+    margin-left: 9%;
+    background-color: #E1607C;
+    min-width: 100px;
+    width: 80%;
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+}
+h1{
+    color: #DB1C45;
+    text-shadow: 1px  2px #5C2733;
+    text-align: center;
+    font-size: 3vw;
+}
+<script>
+        let mes = 4.633;
+        let dia = 139.7;
+        let hora = 3336;    
+        document.getElementById("mes").innerHTML = Math.round(mes * 10) / 10; ;
+        setInterval(data,1000*1000);
+        function data(){
+            dia = dia + 1;
+            mes = mes + 0.033
+            document.getElementById("mes").innerHTML = Math.round(mes * 10) / 10; ;
+        }
+    </script>
+
+    const d = new Date();
+        let text = d.toJSON();
+        let segundos = text.substring(17, 19);
+        let minutos = text.substring(14, 16);
+        let hora = text.substring(11, 13);
+        let dia = text.substring(8, 10);
+        let mes = text.substring(5, 7);
+        let ano = text.substring(0, 4);
+        
+
+        document.getElementById("segundos").innerHTML = "segundos " + segundoTotal;
+        document.getElementById("minutos").innerHTML = "minutos " + minutos;
+        document.getElementById("horas").innerHTML = "horas " + (parseInt(hora) - 3);
+        document.getElementById("dia").innerHTML = "dias " + parseInt(dia);
+        document.getElementById("mes").innerHTML = "meses " + parseInt(mes);
+        document.getElementById("ano").innerHTML = "anos " + parseInt(ano);
+
+
+    }
+    if (segundosP % 3600 == 0){
+        horasTotais = horasTotais + 1;
+        document.getElementById("horas").innerHTML = "horas " + horasTotais;
+}
+    if (segundosP % 86400 == 0){
+        diasTotais = diasTotais + 1;
+        document.getElementById("dia").innerHTML = "dias " + diasTotais;
+}
+if (segundosP % (43800*60) == 0){
+        mesesTotais = mesesTotais + 1;
+        document.getElementById("mes").innerHTML = "meses " + mesesTotais;
+}
+if (segundosP % (365*24*60*60) == 0){
+        anosTotais = anosTotais + 1;
+        document.getElementById("ano").innerHTML = "anos " + anosTotais;
+}
